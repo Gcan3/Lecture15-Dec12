@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string greetings(int time)
+{
+    if (time < 12) {
+        return "Good morning";
+    }
+    else if (time <= 17) {
+        return "Good Afternoon";
+    }
+    else if (time <= 21) {
+        return "Good Evening";
+    }
+    else if (time <= 24) {
+        return "Good Night";
+    }
+    else {
+        return "Not in the clock";
+    }
+}
+
+int main()
+{
+    cout << "What is the time in 24hrs form?" << endl;
+    int userInput;
+    cin >> userInput;
+
+    cout << greetings(userInput) << endl;
+    return 0;
+}
