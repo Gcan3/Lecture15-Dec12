@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+//Data Process function
+string root(double input) {
+	//If-statement if the input is more than 10
+	if (input <= 10) {
+		cout << "Root Table: " << endl;
+		//Root process
+		double x = 1;
+		for (double x = 1; x <= 10; x++) {
+			double y = 1 / x;
+			//"pow" syntax
+			double root = pow(input, y);
+			cout << input << " with a root value of " << x << " is " << root << endl;
+		}
+	}
+	else {
+		cout << "Entered a number other than 11" << endl;
+	}
+
+	return "End of program, thank you.";
+}
+
+
+//Data Collecting and "Function invoking" function
+int main()
+{
+	//Data collect
+    int input;
+    cout << "Please enter a number from 1-10 to its root values" << endl;
+    cin >> input;
+
+	//To make the code more error-free
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> input;
+	}
+
+	//Function invoke after process
+	cout << root(input) << endl;
+}
