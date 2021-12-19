@@ -6,20 +6,14 @@ using namespace std;
 
 //Data Process function
 string root(double input) {
-	//If-statement if the input is more than 10
-	if (input <= 10) {
-		cout << "Root Table: " << endl;
-		//Root process
-		double x = 1;
-		for (double x = 1; x <= 10; x++) {
-			double y = 1 / x;
-			//"pow" syntax
-			double root = pow(input, y);
-			cout << input << " with a root value of " << x << " is " << root << endl;
-		}
-	}
-	else {
-		cout << "Entered a number other than 11" << endl;
+	cout << "Root Table: " << endl;
+	//Root process
+	double x = 1;
+	for (double x = 1; x <= 10; x++) {
+		double y = 1 / x;
+		//"pow" syntax
+		double root = pow(input, y);
+		cout << input << " with a root value of " << x << " is " << root << endl;
 	}
 
 	return "End of program, thank you.";
@@ -31,7 +25,7 @@ int main()
 {
 	//Data collect
     int input;
-    cout << "Please enter a number from 1-10 to its root values" << endl;
+    cout << "Please enter a number to find its root values" << endl;
     cin >> input;
 
 	//To make the code more error-free
