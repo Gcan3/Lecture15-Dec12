@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+//Data Process function
+string root(double input) {
+	cout << "Exponential Table(up to 10): " << endl;
+	//Exponent process
+	double x = 1;
+	for (double x = 1; x <= 10; x++) {
+		//"pow" syntax
+		double root = pow(input, x);
+		cout << input << " with the power of " << x << " is " << root << endl;
+	}
+
+	return "End of program, thank you.";
+}
+
+
+//Data Collecting and "Function invoking" function
+int main()
+{
+	//Data collect
+    int input;
+    cout << "Please enter a number to find its exponential values up to the power of 10:" << endl;
+    cin >> input;
+
+	//To make the code more error-free
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> input;
+	}
+
+	//Function invoke after process
+	cout << root(input) << endl;
+}
