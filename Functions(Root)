@@ -6,7 +6,7 @@ using namespace std;
 
 //Data Process function
 string root(double input) {
-	cout << "Root Table: " << endl;
+	cout << "Root Table(up to 10): " << endl;
 	//Root process
 	double x = 1;
 	for (double x = 1; x <= 10; x++) {
@@ -25,7 +25,7 @@ int main()
 {
 	//Data collect
     int input;
-    cout << "Please enter a number to find its root values" << endl;
+    cout << "Please enter a number to find its root values up to the root of 10:" << endl;
     cin >> input;
 
 	//To make the code more error-free
